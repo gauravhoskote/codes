@@ -1,0 +1,24 @@
+A
+1 2 3 
+B
+4 5 6 
+C = A + B
+5 7 9 
+C = B - A
+3 3 3 
+C = B / A
+4 2 2 
+C = B * A
+4 10 18 
+C += B
+8 15 24 
+
+M = 100x2
+N = 2x100
+Time Taken for s = m*n : 0.001031 seconds
+S = 100x100
+Time Taken for m *= n : 0.001293 seconds
+M *= N => 100x100
+Time Taken s = s + m : 0.000985 seconds
+S = 100x100
+Program ended with exit code: 0
