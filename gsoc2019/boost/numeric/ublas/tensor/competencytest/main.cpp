@@ -55,45 +55,33 @@ int main()
     cout<<endl<<endl;
     Matrix<int> m(100,2,5);
     Matrix<int> n(2,100,2);
-    cout<<"M = 3x2";
+    cout<<"M = "<<m.nrow()<<"x"<<m.ncol();
     cout<<endl;
-    for(int i = 0; i < m.nrow(); i++){
-        for(int j = 0; j < m[0].size(); j++){
-            cout<<m[i][j]<<" ";
-        }
-        cout<<endl;
-    }
-    cout<<"N => 2x3";
+    cout<<"N = "<<n.nrow()<<"x"<<n.ncol();
     cout<<endl;
-    for(int i = 0; i < n.nrow(); i++){
-        for(int j = 0; j < n[0].size(); j++){
-            cout<<n[i][j]<<" ";
-        }
-        cout<<endl;
-    }
     clock_t t;
     t = clock();
     Matrix<int> s = m*n;
     t = clock()-t;
     double tt = ((double)t)/CLOCKS_PER_SEC;
-    cout<<"Time Taken : "<<tt<<endl;
-    cout<<"S = M*N => 3x3";
+    cout<<"Time Taken for s = m*n : "<<tt<<" seconds"<<endl;
+    cout<<"S = "<<s.nrow()<<"x"<<s.ncol();
     cout<<endl;
-    for(int i = 0; i < s.nrow(); i++){
-        for(int j = 0; j < s.ncol(); j++){
-            cout<<s[i][j]<<" ";
-        }
-        cout<<endl;
-    }
+    t = clock();
     m *= n;
-    cout<<"M *= N => 3x3";
+    t = clock() - t;
+    tt = ((double)t)/CLOCKS_PER_SEC;
+    cout<<"Time Taken for m *= n : "<<tt<<" seconds"<<endl;
+    cout<<"M *= N => "<<m.nrow()<<"x"<<m.ncol();
     cout<<endl;
-    for(int i = 0; i < m.nrow(); i++){
-        for(int j = 0; j < m.ncol(); j++){
-            cout<<m[i][j]<<" ";
-        }
-        cout<<endl;
-    }
+    t = clock();
+    s = s + m;
+    t = clock()-t;
+    tt = ((double)t)/CLOCKS_PER_SEC;
+    cout<<"Time Taken s = s + m : "<<tt<<" seconds"<<endl;
+    cout<<"S = "<<s.nrow()<<"x"<<s.ncol();
+    cout<<endl;
+    
     
     return 0;
 }
