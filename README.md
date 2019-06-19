@@ -1,2 +1,2 @@
 # codes
-Implementations of different algorithms and data structures.
+Basic implementations of different algorithms and data structures.
