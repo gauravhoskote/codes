@@ -20,6 +20,14 @@ class LinkedList():
 			print(current.value)
 			current = current.next
 
+	def sortLinkedList(self):
+		current_start = self.head
+		current = current_start.next
+
+
+
+
+
 if __name__ == '__main__':
 	n = int(input("Enter N: "))
 	head = None
